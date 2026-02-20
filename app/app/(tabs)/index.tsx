@@ -18,6 +18,9 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
+      <Button buttonColor={'white'}
+              onPress={() => {console.log('mojn')}}
+      > Tryk på mig</Button>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
