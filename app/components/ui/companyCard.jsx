@@ -6,7 +6,12 @@ import BtnComp from "@/components/ui/button";
 
 const CompanyCardComp = ({sellerName, subTitle, body}) => (
     <Card style={styles.Card}>
-        <Card.Title title={sellerName} subTitle={subTitle}/>
+        <Card.Title titleStyle={{
+            fontSize: 18,
+            fontWeight: 'bold',
+            marginHorizontal: 'auto',
+            paddingTop: '5%'
+        }} title={sellerName} subTitle={subTitle}/>
         <Card.Cover style={styles.CardImg} source={{uri: 'https://picsum.photos/700'}}/>
         <Card.Content>
             {/*<Text variant="titleLarge">Card title</Text>*/}
@@ -35,10 +40,13 @@ const styles = StyleSheet.create({
         height: 420,
         backgroundColor: 'grey',
     },
+    CardTitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
     CardImg: {
         padding: '5%',
         backgroundColor: 'grey',
-
     },
     actions: {
         flexDirection: "row",

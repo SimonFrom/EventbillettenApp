@@ -8,9 +8,6 @@ const BtnComp = ({ title, onPress, style, mode="contained" }) => {
             mode={mode}
             onPress={onPress}
             style={style}
-            // valgfrit – Paper bruger dem allerede:
-            // buttonColor={colors.primary}
-            // textColor={colors.onPrimary}
         >
             {title}
         </Button>

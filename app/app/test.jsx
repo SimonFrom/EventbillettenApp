@@ -1,8 +1,7 @@
 import { Text, View } from "react-native";
 import * as React from "react";
-import BtnComp from "@/components/ui/button";
-import NavTab from "@/components/ui/navTab";
 import CardComp from "@/components/ui/companyCard";
+import SearchComp from "@/components/ui/searchBar";
 
 export default function Test() {
     return (
@@ -13,6 +12,7 @@ export default function Test() {
                 alignItems: "center",
             }}
         >
+            <SearchComp></SearchComp>
             <CardComp
                 sellerName={"OB"}
                 subTitle={"Fodbold klub"}

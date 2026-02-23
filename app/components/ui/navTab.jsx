@@ -13,7 +13,7 @@ const NavTab = () => {
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState([
         { key: 'index', title: 'Home', focusedIcon: 'home-lightning-bolt', unfocusedIcon: 'home-lightning-bolt-outline'},
-        { key: 'test', title: 'Test', focusedIcon: 'album' },
+        { key: 'test', title: 'Seller list', focusedIcon: 'list-box', unfocusedIcon: 'list-box-outline' },
     ]);
 
     const renderScene = BottomNavigation.SceneMap({
