@@ -30,9 +30,7 @@ const NavTab = () => {
             shifting={false}
             sceneAnimationEnabled={true}
             sceneAnimationType={'shifting'}
-            barStyle={{
-                backgroundColor: '#606064',
-            }}
+
 
         />
     );

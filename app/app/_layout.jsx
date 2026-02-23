@@ -1,25 +1,24 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
-import { PaperProvider } from 'react-native-paper';
+import {PaperProvider} from 'react-native-paper';
 import NavTab from "@/components/ui/navTab";
+import {Appearance, useColorScheme} from 'react-native';
+import {LightPaperTheme, DarkPaperTheme} from "@/theme/paperTheme";
 
-
-import { useColorScheme } from '@/hooks/use-color-scheme';
+const colorScheme = Appearance.getColorScheme();
 
 export const unstable_settings = {
-  anchor: '(tabs)',
+    anchor: '(tabs)',
 };
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
+    const scheme = useColorScheme();
 
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <PaperProvider>
-            <NavTab />
+    return (
+        <PaperProvider
+            theme={colorScheme === "dark" ? DarkPaperTheme : LightPaperTheme}>
+            <NavTab/>
 
         </PaperProvider>
-    </ThemeProvider>
-  );
+
+    );
 }

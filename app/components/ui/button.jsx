@@ -1,20 +1,20 @@
-import * as React from 'react';
-import { Button } from 'react-native-paper';
-import { Colors } from '@/constants/theme';
-import {Appearance, StyleSheet} from "react-native";
+import { Button, useTheme } from "react-native-paper";
 
+const BtnComp = ({ title, onPress, style, mode="contained" }) => {
+    const { colors } = useTheme();
 
-const colorScheme = Appearance.getColorScheme()
-const theme = colorScheme === 'dark' ? Colors.dark : Colors.light;
-
-
-const BtnComp = ({ title, onPress }) => (
-    <Button mode="contained"
-            onPress={onPress}>
-        {title}
-    </Button>
-);
-
-
+    return (
+        <Button
+            mode={mode}
+            onPress={onPress}
+            style={style}
+            // valgfrit – Paper bruger dem allerede:
+            // buttonColor={colors.primary}
+            // textColor={colors.onPrimary}
+        >
+            {title}
+        </Button>
+    );
+};
 
 export default BtnComp;
